@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   nitro: {
-    preset: "bun",
+    // Only use bun preset when not in Vercel environment
+    preset: process.env.VERCEL ? "vercel" : "bun",
   },
 });
