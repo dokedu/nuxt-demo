@@ -34,4 +34,5 @@ COPY --from=prerelease /usr/src/app/package.json .
 # run the app
 USER bun
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", "run", "--bun", ".output/server/index.mjs" ] 
+ENV NITRO_HOST=0.0.0.0
+ENTRYPOINT [ "bun", "run", "--bun", ".output/server/index.mjs" ]
