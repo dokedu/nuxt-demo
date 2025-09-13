@@ -4,6 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
     // Only use bun preset when not in Vercel environment
-    preset: process.env.VERCEL ? "vercel" : "bun",
+    // preset: "node",
   },
 });
