@@ -11,6 +11,6 @@ const { data, error } = await useFetch("/api/time");
     <template v-if="error">
       <p>Error: {{ error.message }}</p>
     </template>
-    <p>Version: 1</p>
+    <p>Version: 2</p>
   </div>
 </template>
