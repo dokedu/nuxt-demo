@@ -6,4 +6,9 @@ export default defineNuxtConfig({
     // Only use bun preset when not in Vercel environment
     // preset: "node",
   },
+  runtimeConfig: {
+    public: {
+      helloWorld: "NOPE",
+    },
+  },
 });

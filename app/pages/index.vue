@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 const { data, error } = await useFetch("/api/time");
+
+const config = useRuntimeConfig();
 </script>
 
 <template>
@@ -11,6 +13,7 @@ const { data, error } = await useFetch("/api/time");
     <template v-if="error">
       <p>Error: {{ error.message }}</p>
     </template>
-    <p>Version: 2</p>
+    <p>Version: 3</p>
+    <p>NUXT_PUBLIC_HELLO_WORLD="{{ config.public.helloWorld }}"</p>
   </div>
 </template>
